@@ -1,0 +1,9 @@
+.circleci/
+*.yml
+*.yaml
+package.json
+cypress.json
+cypress/fixtures/example.json
+.next/
+.pnp.js
+.yarn/

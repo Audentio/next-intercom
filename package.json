@@ -1,0 +1,22 @@
+{
+  "name": "next-intercom",
+  "version": "0.0.1",
+  "description": "Next.js Intercom integration",
+  "main": "index.js",
+  "author": "Audentio",
+  "license": "MIT",
+  "dependencies": {
+    "next": "10.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "editorsdk": "yarn sdks vscode"
+  },
+  "devDependencies": {
+    "@yarnpkg/pnpify": "^3.0.1",
+    "@yarnpkg/sdks": "^2.4.1-rc.4",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  }
+}
