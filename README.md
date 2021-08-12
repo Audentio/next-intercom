@@ -2,7 +2,13 @@
 
 #### Add to your next.js app
 
-Add `<Intercom />` to your `_app.page.tsx`.
+1. Add Intercom app ID to your .env
+
+```
+NEXT_PUBLIC_INTERCOM_APP_ID=yourAppIdHere
+```
+
+2. Add `<Intercom />` to your `_app.page.tsx`.
 
 _(You can add to specific routes as well but we recommend adding globally via `_app.tsx`)_
 
