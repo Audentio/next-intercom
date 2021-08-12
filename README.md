@@ -23,9 +23,9 @@ export default function MyApp({ Component, pageProps }) {
     return (
         <>
             <Component {...pageProps} />
-            <Intercom user={user} app_id={process.env.NEXT_PUBLIC_INTERCOM_APP_ID} user={} />
+            <Intercom user={user} app_id={process.env.NEXT_PUBLIC_INTERCOM_APP_ID} />
         </>
-    )
+    );
 }
 ```
 
@@ -51,6 +51,7 @@ export async function handler(req, res) {
         verification_key: process.env.INTERCOM_VERIFICATION_KEY,
 
         // use your own auth/verification flow here
+        // we pass cookies to this function so you can use user's access_token from cookies if you store it here
         verifyUser: async (cookies) => {
             const response = await callMyApiWithToken(cookies.access_token);
 
