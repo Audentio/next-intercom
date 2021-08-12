@@ -2,9 +2,11 @@
 
 #### Add to your next.js app
 
-Add `<Intercom />` to your `_app.page.tsx`. (You can add to specific routes as well but we recommend adding globally via `_app.tsx`)
+Add `<Intercom />` to your `_app.page.tsx`.
 
-```
+_(You can add to specific routes as well but we recommend adding globally via `_app.tsx`)_
+
+```jsx
 import { Intercom } from '@audentio/next-intercom';
 
 export default function MyApp({ Component, pageProps }) {
@@ -27,13 +29,13 @@ export default function MyApp({ Component, pageProps }) {
 
 2. Copy the secret key and store in your `.env`
 
-```
+```bash
 INTERCOM_VERIFICATION_KEY=*secret-key*
 ```
 
 3. Create a new [API route](https://nextjs.org/docs/api-routes/introduction) called `intercom-user-hash` (should be available at `/api/intercom-user-hash`) and pass your user custom verification function
 
-```
+```jsx
 import { generateUserHash } from '@audentio/next-intercom';
 
 export async function handler(req, res) {
@@ -50,15 +52,14 @@ export async function handler(req, res) {
                 return {
                     verified: true,
                     user_id: response.user.id,
-                }
+                };
             } else {
                 return {
                     verified: false,
                     user_id: null,
-                }
+                };
             }
-        }
+        },
     });
 }
-
 ```
